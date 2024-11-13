@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义样式 */
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-500 to-indigo-600 
+           text-white px-4 py-2 rounded-lg
+           hover:from-blue-600 hover:to-indigo-700 
+           transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold mb-6 flex items-center gap-2;
+  }
+}
+
+/* 全局样式 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-gray-800 bg-gray-50;
+}
+
+/* 动画效果 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 响应式容器 */
+.container {
+  @apply mx-auto px-4;
+  max-width: 1280px;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full hover:bg-gray-500;
+} 
