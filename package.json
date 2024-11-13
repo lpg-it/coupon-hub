@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && cd dist && git init && git add -A && git commit -m 'deploy' && git push -f https://github.com/你的用户名/coupon-hub.git main:gh-pages"
+    "deploy": "npm run build && cd dist && git init && git add -A && git commit -m 'deploy' && git push -f git@github.com:YOUR_USERNAME/coupon-hub.git main:gh-pages"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.5",
-    "vite": "^5.4.11"
+    "vite": "^5.4.11",
+    "gh-pages": "^6.1.1"
   }
 }
